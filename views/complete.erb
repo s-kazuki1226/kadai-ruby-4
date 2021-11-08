@@ -40,11 +40,11 @@
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
         
         <h2>送信内容</h2>
-        <% company = params['company'] %>
-        <% name = params['name'] %>
-        <% mail = params['mail'] %>
-        <% tel = params['tel'] %>
-        <% content = params['content'] %>
+        <% company = params['company'].gsub(/\r\n|\r|\n/, "<br>") %>
+        <% name = params['name'].gsub(/\r\n|\r|\n/, "<br>") %>
+        <% mail = params['mail'].gsub(/\r\n|\r|\n/, "<br>") %>
+        <% tel = params['tel'].gsub(/\r\n|\r|\n/, "<br>") %>
+        <% content = params['content'].gsub(/\r\n|\r|\n/, "<br>") %>
       
         <table class="table">
             <tr>
